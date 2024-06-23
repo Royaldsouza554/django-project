@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'date',
     'Home',
     'fruits',
-    'tables'
+    'tables',
+    'count',
 ]
 
 MIDDLEWARE = [

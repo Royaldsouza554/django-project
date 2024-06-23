@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Letter Count</title>
+</head>
+<body>
+    <h1>Letter Count for Sentence: "{{ sentence }}"</h1>
+    <p>Number of vowels: {{ vowel_count }}</p>
+    <p>Number of consonants: {{ consonant_count }}</p>
+    <h2>List of Vowels:</h2>
+    <ul>
+        {% for vowel in vowel_list %}
+            <li>{{ vowel }}</li>
+        {% endfor %}
+    </ul>
+    <h2>List of Consonants:</h2>
+    <ul>
+        {% for consonant in consonant_list %}
+            <li>{{ consonant }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
