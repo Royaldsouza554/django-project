@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>{% block title_content %}
+        Home
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="flex justify-start gap-8">
+                <li><a href="/layout">Home</a></li>
+                <li><a href="/fruits">fruits</a></li>
+                <li><a href="/students">students</a></li>
+                <li><a href="/date">date</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class='flex flex-col justify-center items-center'>
+        <h1 class='text-xl text-green-700'>
+        {%block head_content %}
+        <a href="/layout">Home page</a>
+        {% endblock %}
+        </h1>
+        <section>
+            {%block main_content %}
+            Home page
+            {% endblock %}
+        </section>
+    </main>
+        
+    <footer>
+
+    </footer>
+</body>
+</html>

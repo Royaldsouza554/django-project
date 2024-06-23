@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>{% block title_content %}
+        fruits
+        {% endblock %}
+    </title>
+</head>
+<body>
+   <div class="flex flex-col justify-center items-center">
+    <h1 class="text-xl font-bold text-green-600">Fruits list</h1>
+    {%block head_content %}
+        Fruits page
+    {% endblock %}
+
+    {%block main_content %}
+    <ul class="text-sm">
+        {% for fruit in fruits %}
+        <li>{{fruit}}</li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+   </div>
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title_content %} Homepage {% endblock %}</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            height: 10vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            height: 70vh;
+        }
+        .navbar{
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .heading{
+            text-align: center;
+            padding: 2rem;
+        }
+        .navbar > li > a{
+            text-decoration: none;
+            color: white;
+        }
+        footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20vh;
+            background: #000;
+            color: white;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="navbar">
+            <li><a href="/">home</a></li>
+            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+        </ul>
+    </header>
+    <main>
+        <h1 class="heading">{% block heading %}
+            Home Page
+            {% endblock %}
+        </h1>
+        <section>
+          {% block content %}
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perferendis corrupti omnis et architecto in sunt atque numquam quasi quia totam ex, nulla nisi fugit, quos deleniti cumque nemo dicta? Rerum quo autem aliquid culpa enim cumque minima suscipit ut, labore mollitia ipsam dicta tempora corrupti necessitatibus totam? Quisquam tenetur qui, earum temporibus eos optio, labore natus quam accusamus magni commodi ipsa possimus eaque?
+        </p>
+          {% endblock %}
+        </section>
+    </main>
+    <footer>
+        CopyRight &copy; All Rights Reserved | developed by Royal
+    </footer>
+</body>
+</html>
