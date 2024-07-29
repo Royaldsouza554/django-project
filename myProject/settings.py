@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'tables',
     'count',
     'registration_app',
+    'projects_submission',
 ]
 
 MIDDLEWARE = [

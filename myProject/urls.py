@@ -28,4 +28,5 @@ urlpatterns = [
     path('table/', include('tables.urls')),
     path('count/', include('count.urls')),
     path('courses/', include('registration_app.urls')),
+    path('', include('projects_submission.urls')),
 ]
