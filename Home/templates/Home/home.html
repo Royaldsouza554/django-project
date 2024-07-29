@@ -1,38 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title_content %} Homepage {% endblock %}</title>
-    <style>
-        *{
+    <!-- <style>
+        * {
             margin: 0;
             padding: 0;
         }
-        header{
+
+        header {
             height: 10vh;
             background-color: black;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        main{
+
+        main {
             height: 70vh;
         }
-        .navbar{
+
+        .navbar {
             display: flex;
             list-style: none;
             gap: 2rem;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
         }
-        .heading{
+
+        .heading {
             text-align: center;
             padding: 2rem;
         }
-        .navbar > li > a{
+
+        .navbar > li > a {
             text-decoration: none;
             color: white;
+            padding: 10px 15px;
         }
-        footer{
+
+        .navbar > li .active ,
+        .navbar > li:hover {
+            background-color: white;
+            color: #000;
+        }
+        .navbar > li .active>a,
+        .navbar > li:hover> a {
+            background-color: white;
+            color: #000;
+        }
+        
+
+        footer {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -40,22 +63,31 @@
             background: #000;
             color: white;
         }
-        section{
+
+        section {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        p{
+
+        p {
             width: 500px;
         }
-    </style>
+
+        .navbar > li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    </style> -->
 </head>
+
 <body>
     <header>
         <ul class="navbar">
-            <li><a href="/">home</a></li>
-            <li><a href="/about-us">About Us</a></li>
-            <li><a href="/contact-us">Contact Us</a></li>
+            <li {% if page == "home" %}class="active"{% endif %}><a href="/">Home</a></li>
+            <li class="{% if page == 'about-us' %}active{% endif %}"><a href="/about-us">About Us</a></li>
+            <li class="{% if page == 'contact-us' %}active{% endif %}"><a href="/contact-us">Contact Us</a></li>
         </ul>
     </header>
     <main>
@@ -64,15 +96,16 @@
             {% endblock %}
         </h1>
         <section>
-          {% block content %}
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perferendis corrupti omnis et architecto in sunt atque numquam quasi quia totam ex, nulla nisi fugit, quos deleniti cumque nemo dicta? Rerum quo autem aliquid culpa enim cumque minima suscipit ut, labore mollitia ipsam dicta tempora corrupti necessitatibus totam? Quisquam tenetur qui, earum temporibus eos optio, labore natus quam accusamus magni commodi ipsa possimus eaque?
-        </p>
-          {% endblock %}
+            {% block content %}
+            <p>
+                Home page content
+            </p>
+            {% endblock %}
         </section>
     </main>
     <footer>
         CopyRight &copy; All Rights Reserved | developed by Royal
     </footer>
 </body>
+
 </html>
