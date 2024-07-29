@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'fruits',
     'tables',
     'count',
+    'registration_app',
 ]
 
 MIDDLEWARE = [
@@ -132,5 +133,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 COMPRESS_ROOT = BASE_DIR / 'static'
 
 COMPRESS_ENABLED = True
-
-STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)

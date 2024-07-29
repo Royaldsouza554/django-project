@@ -27,4 +27,5 @@ urlpatterns = [
     path("students/" , views.students, name= 'students'),
     path('table/', include('tables.urls')),
     path('count/', include('count.urls')),
+    path('courses/', include('registration_app.urls')),
 ]

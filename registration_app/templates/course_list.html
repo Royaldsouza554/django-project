@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Course list</title>
+</head>
+<body>
+      <h1 style="text-transform: uppercase;">courses</h1>
+      <ul>
+            {% for course in courses%}
+            <li>Course ID:{{course.id}} - {{course.name}} <a href='{% url "course_details" course.id%}'>View students</a> <hr></li>
+            {%endfor%}
+      </ul>
+</body>
+</html>
