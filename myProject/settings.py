@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'count',
     'registration_app',
     'projects_submission',
+    'book'
 ]
 
 MIDDLEWARE = [
